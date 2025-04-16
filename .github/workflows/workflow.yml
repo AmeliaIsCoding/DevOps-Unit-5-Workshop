@@ -48,4 +48,4 @@ jobs:
     
     - name: Send Slack notification
       run: >
-        curl -X POST --data-urlencode 'payload={"channel": "#devops-test", "username": "webhookbot", "text": "Worklow completed!"}'' ${{ secrets.SLACK_WEBHOOK_URL }}
+        curl -X POST --data-urlencode 'payload={"channel": "#devops-test", "username": "webhookbot", "text": "Worklow completed!"}' ${{ secrets.SLACK_WEBHOOK_URL }}
