@@ -3,14 +3,25 @@ on: [push]                      # Will make the workflow run every time you push
 
 jobs:
   build:
-    name: Build and test C#
+    name: Build and test
     runs-on: ubuntu-latest      # Sets the build environment a machine with the latest Ubuntu installed
     steps:
     - uses: actions/checkout@v4 # Adds a step to checkout the repository code
 
-    - name: Build
+    - name: Build C#
       run: dotnet build
 
-    - name: Test
+    - name: Test C#
       run: dotnet test
-      
+
+    - name: Build TypeScript
+      run: |
+        cd DotnetTemplate.Web
+        npm install
+        npm run build
+
+    - name: Lint TypeScript
+      run: npm run lint
+
+    - name: Test TypeScript
+      run: npm t
