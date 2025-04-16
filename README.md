@@ -1,3 +1,5 @@
+![CI](https://github.com/<AmeliaIsCoding>/<DevOps-Unit-5-Workshop>/actions/workflows/workflow.yml/badge.svg)
+
 # DevOps Unit 5 Workshop
 
 Welcome to the Unit 5 Workshop!
