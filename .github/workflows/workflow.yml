@@ -16,7 +16,7 @@ jobs:
       run: dotnet build
 
     - name: Test C#
-      run: dotnet test
+      run: dawfjdhaksjdf
 
   build-typescript:
     name: Build and test TypeScript
