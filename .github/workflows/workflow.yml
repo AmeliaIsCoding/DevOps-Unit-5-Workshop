@@ -21,7 +21,11 @@ jobs:
         npm run build
 
     - name: Lint TypeScript
-      run: npm run lint
+      run: |
+        cd DotnetTemplate.Web  
+        npm run lint
 
     - name: Test TypeScript
-      run: npm t
+      run: |
+        cd DotnetTemplate.Web  
+        npm t
