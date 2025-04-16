@@ -6,8 +6,8 @@ on:
   pull_request:                      # Will make the workflow run every time you push to any branch
 
 jobs:
-  build:
-    name: Build and test
+  build-c:
+    name: Build and test C#
     runs-on: ubuntu-latest      # Sets the build environment a machine with the latest Ubuntu installed
     steps:
     - uses: actions/checkout@v4 # Adds a step to checkout the repository code
@@ -17,6 +17,12 @@ jobs:
 
     - name: Test C#
       run: dotnet test
+
+  build-typescript:
+    name: Build and test TypeScript
+    runs-on: ubuntu-latest      # Sets the build environment a machine with the latest Ubuntu installed
+    steps:
+    - uses: actions/checkout@v4
 
     - name: Build TypeScript
       run: |
